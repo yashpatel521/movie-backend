@@ -1,7 +1,7 @@
 // Imports
+const compression = require("compression");
 const express = require("express");
 const bodyParser = require("body-parser");
-const db = require("./database/db");
 const userRouter = require("./routes/user");
 const movieRouter = require("./routes/movie");
 const actorRouter = require("./routes/actor");
@@ -9,6 +9,7 @@ const genreRouter = require("./routes/genre");
 
 // Create & Configure App
 const app = express();
+app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
