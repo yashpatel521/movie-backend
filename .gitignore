@@ -4,6 +4,7 @@
 node_modules
 movies.db
 watchers-frontend
+.env
 ### Linux ###
 *~
 
